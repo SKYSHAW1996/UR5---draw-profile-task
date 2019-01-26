@@ -1,0 +1,9 @@
+% function professor_bw_small = profile(m)
+% m='0.jpg';
+professor = imread(m);
+professor_bw = im2bw(professor,110/255);
+% imshow(professor_bw);
+
+professor_bw_small = double(imresize(professor_bw,[100,100]));
+% figure;imshow(professor_bw_small,[]);
+end
