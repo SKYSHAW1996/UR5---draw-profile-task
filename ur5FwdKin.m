@@ -28,7 +28,8 @@ for i =1:6
     gst = gst*gi;
 end
 gst = gst*gst0;
-Roffset = ROTX(-pi/2)*ROTY(pi/2);goffset = [Roffset,[0 0 0]';0 0 0 1];
+Roffset = ROTX(-pi/2)*ROTY(pi/2);
+goffset = [Roffset,[0 0 0]';0 0 0 1];
 gst = gst*goffset;
 % disp(gst);
 end

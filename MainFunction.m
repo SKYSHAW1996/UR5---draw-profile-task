@@ -59,14 +59,14 @@ for n = 1:col
             %draw the dot and then leave the workbench
             g_index(3,4) = g_index(3,4) - 0.04;
             q = ur5InvKin(g_index);
-            ur5.move_joints(q(:,1), time_interval-1);pause(time_interval-1);
+            ur5.move_joints(q(:,1), time_interval);pause(time_interval);
             
 %             g_index = ur5FwdKin(q(:,1)-offset);
 %             disp(g_index(3,4));
             
             g_index(3,4) = g_index(3,4) + 0.04;
             q = ur5InvKin(g_index);
-            ur5.move_joints(q(:,1), time_interval-1);pause(time_interval-1);
+            ur5.move_joints(q(:,1), time_interval);pause(time_interval);
             %update the g_index
             g_index = ur5FwdKin(q(:,1)-offset);
             
