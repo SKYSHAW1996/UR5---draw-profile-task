@@ -1,26 +1,14 @@
-function ExtraCredit ()
+function MAIN ()
 %access to the image file
 m = '0.jpg';
 image = profile(m);
 [row,col] = size(image);
 
-%Teach the manipulator the g_start and g_target
-offset = [-pi/2, -pi/2, 0, -pi/2, 0 0]';
-% [start_joints,target_joints] = Initialization();
-% gstart  = ur5FwdKin(start_joints - offset);
-% gtarget  = ur5FwdKin(target_joints - offset);
-%%Use these for test
-gstart=[0 -1 0 0.47;
-0 0 1 0.55;
--1 0 0 0.12;
-0 0 0 1];
-disp('Get the gstart and gtarget');
-
 %Initialize the ur5 manipulator
 ur5=ur5_interface();
 ur5.move_joints(offset, 5); %gst0 configuration
 pause(5.5)
-disp('Please press any button to start the extra task');
+disp('Please press any button to start the drawing task');
 waitforbuttonpress;
 
 %Define the index
